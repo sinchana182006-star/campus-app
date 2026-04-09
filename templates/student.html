@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student</title>
+</head>
+<body>
+
+<h1>📢 Student Dashboard</h1>
+
+{% for item in data %}
+    <div style="background:#eee; padding:10px; margin:10px;">
+        <h3>{{ item[1] }}</h3>
+        <p>{{ item[2] }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

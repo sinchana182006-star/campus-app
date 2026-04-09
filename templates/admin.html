@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+</head>
+<body>
+
+<h1>📢 Admin Dashboard</h1>
+
+<form method="POST">
+    <input name="title" placeholder="Enter Title" required><br><br>
+    <input name="desc" placeholder="Enter Description" required><br><br>
+    <button>Add Announcement</button>
+</form>
+
+<hr>
+
+<h2>All Announcements</h2>
+
+{% for item in data %}
+    <div style="background:#eee; padding:10px; margin:10px;">
+        <h3>{{ item[1] }}</h3>
+        <p>{{ item[2] }}</p>
+        <a href="/delete/{{ item[0] }}">Delete</a>
+    </div>
+{% endfor %}
+
+</body>
+</html>
